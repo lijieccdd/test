@@ -9,11 +9,12 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <groupId>com.jay.test</groupId>
     <artifactId>test-springcloud</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
         <module>eureka-server</module>
-        <module>user-service</module>
     </modules>
 
     <dependencyManagement>

@@ -1,0 +1,16 @@
+server:
+  port: 8763
+
+spring:
+  application:
+    name: eureka-server-app-02
+
+eureka:
+  client:
+    allow-redirects: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka01:8762/eureka/
+  instance:
+    hostname: eureka02
+

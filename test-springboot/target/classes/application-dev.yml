@@ -7,6 +7,6 @@ logging:
 spring:
   redis:
     database: 1
-    host: 47.94.87.93
+    host: localhost
     pool:
       max-active: 20

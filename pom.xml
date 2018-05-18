@@ -26,6 +26,7 @@
         <module>testweb</module>
         <module>test-springboot</module>
         <module>test-springcloud</module>
+        <module>test-jvm</module>
         <module>test-delayqueen</module>
     </modules>
     <packaging>pom</packaging>

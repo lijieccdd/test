@@ -2,7 +2,7 @@
 <configuration>
     <!--<include resource="org/springframework/boot/logging/logback/base.xml"/>-->
     <!-- 项目的appid -->
-    <property name="APP_ID" value="com.jay.test.springboot"/>
+    <property name="APP_ID" value="com.jay.test.netty"/>
     <property name="LOG_PATH" value="E:/log"></property>
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>

@@ -2,11 +2,30 @@ server:
   port: 8080
   error:
     path: /custom/error
+
 logging:
   config: classpath:logback.xml
+
 spring:
   redis:
     database: 1
     host: 47.94.87.93
     pool:
       max-active: 20
+  datasource:
+    url: jdbc:mysql://47.94.87.93:3306/db_test?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  type-aliases-package: com.jay.test.springboot.model
+  mapper-locations: classpath:mapper/*.xml
+mapper:
+  mappers: com.jay.test.springboot.common.BaseMapper
+  identity: MYSQL
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql

@@ -1,3 +1,4 @@
+/*
 package com.jay.test.springboot.mapper.user;
 
 import com.jay.test.springboot.model.user.User;
@@ -28,4 +29,4 @@ public interface UserMapper {
   @Delete("delete from t_user")
   void deleteAll();
 
-}
+}*/

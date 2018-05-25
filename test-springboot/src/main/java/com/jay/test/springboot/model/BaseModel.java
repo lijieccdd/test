@@ -1,9 +1,7 @@
 package com.jay.test.springboot.model;
 
-import lombok.*;
+import lombok.Data;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
@@ -14,8 +12,6 @@ import java.io.Serializable;
  */
 @Data
 public class BaseModel implements Serializable{
-    @Id
-    @GeneratedValue
     private Long id;
 
     public BaseModel() {

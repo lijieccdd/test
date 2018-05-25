@@ -1,3 +1,4 @@
+/*
 package com.jay.test.user;
 
 import com.jay.test.springboot.dao.user.UserDao;
@@ -30,7 +31,8 @@ public class userDaoTest {
     }
   }
 
-  /*@Test
+  */
+/*@Test
   public void all() throws Exception {
     save();
     Assertions.assertThat(userDao.findAll()).hasSize(10);
@@ -40,11 +42,12 @@ public class userDaoTest {
   public void findByName() throws Exception {
     save();
     Assertions.assertThat(userDao.findByNameLike("jege%")).hasSize(10);
-  }*/
+  }*//*
+
 
   @After
   public void destroy() throws Exception {
     userDao.deleteAll();
   }
 
-}
+}*/

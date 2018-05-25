@@ -1,10 +1,7 @@
 package com.jay.test.springboot.model.user;
 
 import com.jay.test.springboot.model.BaseModel;
-import lombok.*;
-
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import lombok.Data;
 
 /**
  * @Author : lijie
@@ -13,8 +10,6 @@ import javax.persistence.Table;
  * @Modified by :
  */
 @Data
-@Entity
-@Table(name = "user")
 public class User extends BaseModel{
     private String name;
     private Integer age;

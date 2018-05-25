@@ -3,10 +3,10 @@ server:
   error:
     path: /custom/error
 logging:
-  config: classpath:logback-dev.xml
+  config: classpath:logback.xml
 spring:
   redis:
     database: 1
-    host: localhost
+    host: 47.94.87.93
     pool:
       max-active: 20

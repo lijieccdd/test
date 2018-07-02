@@ -1,4 +1,4 @@
-package com.jay.test.springcloud.controller.springboot.common;
+package com.jay.test.springboot.common;
 
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.common.MySqlMapper;

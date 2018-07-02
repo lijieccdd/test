@@ -1,16 +1,26 @@
 package com.jay.test.springcloud.controller.user;
 
+import cn.afterturn.easypoi.excel.ExcelExportUtil;
+import cn.afterturn.easypoi.excel.entity.ExportParams;
 import com.github.pagehelper.PageHelper;
-import com.jay.test.springcloud.controller.springboot.AppApplication;
-import com.jay.test.springcloud.controller.springboot.mapper.UserMapper;
-import com.jay.test.springcloud.controller.springboot.model.user.User;
+import com.jay.test.springboot.AppApplication;
+import com.jay.test.springboot.mapper.RankListMapper;
+import com.jay.test.springboot.mapper.UserMapper;
+import com.jay.test.springboot.model.rank.RankInfo;
+import com.jay.test.springboot.model.user.User;
+import com.jay.test.springboot.util.FileUtil;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.File;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -19,6 +29,27 @@ public class SpringBootMyBatisApplicationTests {
 
     @Autowired
     private UserMapper mapper;
+    @Autowired
+    private RankListMapper rankListMapper;
+
+    @Test
+    public void selectRankInfoList() throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        Date startDate = sdf.parse("2018-06-15 00:00:00");
+        Date endDate = sdf.parse("2018-06-30 23:59:59");
+        String userIDs = "3974621,3345167,3177009";
+        String[] userIdArray = userIDs.split(",");
+        for (String s : userIdArray) {
+            Long userId = Long.parseLong(s);
+            List<RankInfo> rankInfos = rankListMapper.selectRankInfoList(userId,startDate,endDate);
+            Workbook workbook = ExcelExportUtil.exportExcel(new ExportParams("用户比赛数据",userId+""),
+                    RankInfo .class, rankInfos);
+            FileUtil.exportToFile(userId+".xls",workbook);
+        }
+
+    }
+
+
 
     // 插入一条新记录
     @Test

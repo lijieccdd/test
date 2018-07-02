@@ -1,6 +1,6 @@
-package com.jay.test.springcloud.controller.springboot.model.user;
+package com.jay.test.springboot.model.user;
 
-import com.jay.test.springcloud.controller.springboot.common.BaseModel;
+import com.jay.test.springboot.common.BaseModel;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -14,7 +14,7 @@ import javax.persistence.Table;
  */
 @Data
 @Table(name = "t_user")
-public class User extends BaseModel{
+public class User extends BaseModel {
     @Column
     private String name;
     @Column

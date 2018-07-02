@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jay.test.springboot.mapper.RankListMapper">
+    <select id="selectRankInfoList" resultType="RankInfo">
+      SELECT
+            matchName,
+            gameSign,
+            screeningId,
+            screeningStartTime,
+            userId,
+            rank,
+            rankScore
+        FROM
+            m_prize_note
+        WHERE
+            screeningId IN (
+                SELECT DISTINCT
+                    (screeningId)
+                FROM
+                    m_prize_note
+                WHERE
+                    userId = #{userId}
+                AND screeningStartTime BETWEEN #{startDate}
+                AND #{endDate}
+            )
+        ORDER BY
+            gameSign,
+            screeningId,
+            rank
+    </select>
+</mapper>

@@ -1,4 +1,4 @@
-package com.jay.test.springcloud.controller.springboot.common;
+package com.jay.test.springboot.common;
 
 import lombok.Data;
 

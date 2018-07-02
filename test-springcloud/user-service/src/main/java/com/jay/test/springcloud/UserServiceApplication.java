@@ -12,10 +12,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-public class UserApplication {
+public class UserServiceApplication {
     public static void main(String[] args) {
         new SpringApplicationBuilder(
-                UserApplication.class)
+                UserServiceApplication.class)
                 .web(true).run(args);
     }
 }

@@ -35,9 +35,9 @@ public class SpringBootMyBatisApplicationTests {
     @Test
     public void selectRankInfoList() throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        Date startDate = sdf.parse("2018-06-15 00:00:00");
-        Date endDate = sdf.parse("2018-06-30 23:59:59");
-        String userIDs = "3974621,3345167,3177009";
+        Date startDate = sdf.parse("2018-06-11 00:00:00");
+        Date endDate = sdf.parse("2018-07-26 23:59:59");
+        String userIDs = "3991727";
         String[] userIdArray = userIDs.split(",");
         for (String s : userIdArray) {
             Long userId = Long.parseLong(s);

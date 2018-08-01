@@ -13,9 +13,9 @@ spring:
     pool:
       max-active: 20
   datasource:
-    url: jdbc:mysql://47.94.87.93:3306/db_test?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
-    username: root
-    password: 123456
+    url: jdbc:mysql://rm-bp14v730z41fj55lc.mysql.rds.aliyuncs.com:3306/match_online?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+    username: match_read
+    password: 9yXQrmzxWlT4ryaJ
     driver-class-name: com.mysql.jdbc.Driver
 
 mybatis:

@@ -3,6 +3,7 @@ package com.jay.test.springcloud;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import tk.mybatis.spring.annotation.MapperScan;
 
 /**
  * @Author : lijie
@@ -12,6 +13,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
+@MapperScan(basePackages = { "com.jay.test.springcloud.mapper" })
 public class UserServiceApplication {
     public static void main(String[] args) {
         new SpringApplicationBuilder(

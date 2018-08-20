@@ -6,6 +6,7 @@ spring:
       uri: http://localhost:1201/
       profile: dev
       label: master
+
 server:
   port: 2001
 eureka:

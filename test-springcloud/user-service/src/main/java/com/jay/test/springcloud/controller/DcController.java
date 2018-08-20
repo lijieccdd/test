@@ -11,8 +11,8 @@ public class DcController {
 
     @Autowired
     DiscoveryClient discoveryClient;
-    @Value("${info.profile}")
-    String info;
+    /*@Value("${info.profile}")
+    String info;*/
 
     @GetMapping("/dc")
     public String dc() {
@@ -23,7 +23,7 @@ public class DcController {
 
     @GetMapping("/info")
     public String getInfo(){
-        return info;
+        return "";
     }
 
 }

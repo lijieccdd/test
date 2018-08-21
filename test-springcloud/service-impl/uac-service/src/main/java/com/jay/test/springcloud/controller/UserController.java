@@ -2,6 +2,7 @@ package com.jay.test.springcloud.controller;
 
 import com.jay.test.springcloud.mapper.UacUserMapper;
 import com.jay.test.springcloud.model.UacUser;
+import com.jay.test.springcloud.service.UacUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,11 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("user")
 public class UserController {
     @Autowired
-    UacUserMapper uacUserMapper;
+    UacUserService uacUserService;
 
     @RequestMapping("info")
     public UacUser getUserInfo(UacUser uacUser){
-        UacUser result = uacUserMapper.selectOne(uacUser);
+        UacUser result = uacUserService.selectOne(uacUser);
         return result;
     }
 }

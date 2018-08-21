@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: omc-service
+  cloud:
+    config:
+      uri: http://localhost:1201/
+      profile: dev
+      label: master
+
+server:
+  port: 2002
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

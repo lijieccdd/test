@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Date : Create in 2018/8/21 9:58
  * @Modified by :
  */
-@FeignClient("user-service")
+@FeignClient("uac-service")
 public interface UserFeignApi {
     @RequestMapping("/selectOne")
     UacUser selectOne(@RequestParam("uacUser")UacUser uacUser);
